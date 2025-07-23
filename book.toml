@@ -1,0 +1,16 @@
+[book]
+authors = ["VET. 周培公"]
+language = "en"
+multilingual = false
+src = "src"
+title = "跟着周导看军博 - VET.周培公(https://pg.js.cn)"
+
+[build]
+build-dir = "./docs"
+
+[output.html]
+default-theme = "rust"
+git-repository-url = "https://github.com/peigong/jb"
+edit-url-template = "https://github.com/peigong/jb/edit/master/guide/{path}"
+site-url = "/"
+cname = "pg.js.cn"

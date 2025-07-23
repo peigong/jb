@@ -1,0 +1,13 @@
+{
+  "name": "jb",
+  "version": "1.0.0",
+  "description": "跟着周导看军博",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "serve": "mdbook serve",
+    "build": "mdbook clean & mdbook build"
+  }
+}

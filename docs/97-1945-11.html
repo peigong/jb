@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>功臣号坦克 - 跟着周导看军博 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">跟着周导看军博 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/97-1945-11.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="功臣号坦克"><a class="header" href="#功臣号坦克">功臣号坦克</a></h1>
+<p>功臣号坦克，是人民军队的第一辆坦克，被坦克手们亲切的称为老头坦克。功臣号坦克，先后参加了三下江南、攻打锦州、解放天津等战役。在1949年10月1日，功臣号坦克作为开国大典坦克方队的第一车，率先通过天安门广场，接受了党和人民的检阅。</p>
+<h2 id="九七式中型坦克"><a class="header" href="#九七式中型坦克">九七式中型坦克</a></h2>
+<p>功臣号坦克，是一辆九七式中型坦克。九七式坦克，是日本第二次世界大战期间装备的中型坦克，由日本三菱重工业公司1937年设计定型。1938年开始装备日军，一直服役到1945年，共装备了1500多辆，在二战期间被日军广泛使用。97是日本天皇纪年2597年（公元1937年）的后两位数。</p>
+<h2 id="装甲兵第一车"><a class="header" href="#装甲兵第一车">装甲兵第一车</a></h2>
+<p>1945年11月，东北民主自治军的高克等人，奉命到沈阳九一八工厂(原日本关东军坦克修理厂)侦察敌特活动情况，无意中发现了几辆日军的坦克。乘人不备，高克和俘虏的日本人各驾着一辆正在修理的坦克，冲出修理厂大门。开到沈阳铁道西，停放在一个被破坏的工厂里。</p>
+<p>高克留下几名战士看护坦克，又带领几名工人继续寻找车辆和器材、零件。晚上，组织人员进行修理。在几名老工人的帮助下，经过十几天的收集和修配，修好了两辆坦克、两辆装甲车、两辆牵引车和一辆汽车。</p>
+<p>敌情紧急，司令部命令高克等，驾驶坦克和车辆向吉林通化转移。经过一天行进，由于坦克和车辆故障太多，不得不停在沈阳西北的小桥子屯。临时拉进来的工人中，混进了敌特分子。趁着高克带领战士打探道路还没有回来的时机，敌特分子发动暴动，破坏了大部分坦克和车辆，逃回沈阳。只有一辆坦克，在部分工人的保护下，得以幸免。高克等人返回后，看到如此情景，非常痛心和气愤。为了保全剩下的这辆九七式中型坦克，只好暂时住在小桥子屯，等待部队来人接应。</p>
+<p>民主自治军司令部失去了同高克等人的联系后，派出曾学习过坦克技术的孙三，带领骑兵警卫排向沈阳西北寻找。经过两天的四处打探，终于在小桥子屯找到他们。</p>
+<p>敌情越来越紧急，上级要求高克、孙三等带上可以带走的坦克器材迅速转移。但是，坦克由于破坏严重无法行进，必须去搜集器材，重新修理。经研究决定，孙三率警卫排再闯沈阳九一八工厂抢器材，高克率领剩下人员修理坦克。孙三带人抢回一车的器材、零件，高克等人修理好坦克。</p>
+<p>敌情已经非常紧急，高克、孙三等驾驶着那辆修理好的坦克和一辆装满器材、零件的汽车，向东北炮兵司令部所在地马家湾子开进。到了马家湾子，坦克的隆隆声惊动了炮兵司令部全体人员，他们围着坦克转了一圈又一圈。</p>
+<p>时任东北炮兵司令员兼炮兵学校校长的朱瑞，紧紧握着高克和孙三的手说：“你们开来的不是一辆坦克，你们给我军带来了一支装甲部队。”</p>
+<p>当晚，炮校首长宣布东北局的决定，在炮校附设坦克大队。东北坦克大队，是当时各解放区中，第一个正式建立的坦克部队。一辆普通的九七式中型坦克，也传奇般地成了人民解放军装甲兵历史上的第一车。</p>
+<h2 id="功臣号坦克-1"><a class="header" href="#功臣号坦克-1">功臣号坦克</a></h2>
+<p>我军第一辆坦克，资格最老，机器最旧，培养出的坦克手和修理工最早，被亲切的称为老头坦克。</p>
+<p>1948年攻打锦州时，老头坦克遇到了最佳搭档，驾驶员董来扶。因为故障太多，老头坦克本来没有承担任务。董来扶和车长牛生贵一起写了请战书，保证能上阵杀敌。于是，他与全车乘员一起，抢修老头坦克。饭在车边吃，困了就在车里打个盹儿，机油把头发粘成绺也顾不上洗。</p>
+<p>接到出发命令时，全团坦克都上了火车，唯有老头坦克，还停在车库里不能发动。董来扶再次向领导保证，只要把坦克拖上火车，在赶到前线之前，一定能把坦克修好。在他们的一再保证下，大家把老头坦克拖上了火车。在开往前线的火车上，董来扶和全车乘员，夜以继日，一直陪伴在老头坦克身边，聚精会神地检修。真是功到自然成，到达驻地后，老头坦克在隆隆声里，大摇大摆地走下火车。战友们都围了上来，把董来扶高高地抬起。</p>
+<p>由于坦克大队是第一次参加大规模城市攻坚战，要想打得漂亮，驾驶员的操作能力很重要。</p>
+<p>战斗中，坦克在炮兵火力的掩护下，冲过了几道战壕，碾过数道铁丝网之后，前面便出现了一大段开阔地。为避免坦克被敌炮火击伤，董来扶双手轮换急拉操纵杆，使坦克蛇行前进。只见坦克周围腾起一股股炸烟，敌人的炮弹一颗颗都落空了。当坦克冲到铁路桥前时，一道石墙挡住了坦克的去路。这时，步兵很难前进一步，石墙上面，敌人的机枪封锁了步兵前进的道路。一阵阵密集的火力，压得步兵抬不起头来。坦克炮一阵猛烈的轰击，石墙被打开了，步兵在一阵喊杀中冲过了石墙，敌人的防线被突破了。</p>
+<p>经过短暂的停歇后，老头坦克又开始了第二次冲击。这时，步兵已进入巷战。敌人在街道口堆起各种障碍物，碉堡星罗棋布，步兵每前进一步都得付出很大的牺牲。正当坦克碾过障碍，摧毁了碉堡，领步兵前进时，董来扶发现，车温突然升到95度。他马上意识到：机油冷却器被弹片击伤了，机件润油受到影响。董来扶冒着炮火进行战地抢修。</p>
+<p>天已经黑了，枪声和火光就是战斗命令。董来扶开着修好的坦克向火光冲去，把第二梯队的步兵带到锦州老城下，胜利完成了第三次冲击。</p>
+<p>第四次冲击，是老头坦克单车完成的战斗任务，消灭了敌人的火力点，攻克了敌人固守的火车站。</p>
+<p>最后一次冲击，是攻打锦州老城。这是解放锦州的最后的一次战斗。当时，敌人龟缩在老城里，妄图依仗城墙和护城河进行顽抗。老头坦克迎着炮火走在坦克队列的前面，且战且进。炮弹和手榴弹像冰雹一样从城墙袭来，河岸烟尘四起，河中水柱冲天，一场大战正在紧张时刻，坦克冷却器第二次被击伤。坦克虽不能行动，但并没有停止战斗。充分发挥了坦克的火器威力，紧紧压住敌人的炮火。炮手只几发炮弹，便打掉了城内的敌人指挥所。当敌人的指挥所起火时，一阵喊杀声，震动了整个战场，步兵像一阵暴风，纷纷越过护城河，爬上了城墙。这时，从坦克的瞭望孔可以看到城上的敌人已打出了白旗。</p>
+<p>战后，第四野战军司令部、政治部命名老头坦克为“功臣号”坦克，荣记集体三等功。董来扶和机枪手吴佩龙荣立一等功。</p>
+<h2 id="开国大典第一车"><a class="header" href="#开国大典第一车">开国大典第一车</a></h2>
+<p>辽沈战役结束后，老头坦克又随第四野战军南下，参加了平津战役。在攻打天津的战役中，老头坦克在敌人集火打击情况下，摧毁敌人一个又一个碉堡。特别是在进攻金汤桥战斗中，主动出击，吸引敌火力，先后摧毁敌3个暗堡、5个火力点，率先攻克金汤桥。</p>
+<p>北平和平解放，老头坦克参加了入城式。1949年3月25日，党中央、中央军委从河北平山县西柏坡移到北平，毛泽东在北平西苑机场检阅了包括“功臣号”在内的装甲部队。</p>
+<p>在开国大典上，董来扶驾驶着“功臣号”坦克作为首车，率领100多辆中型坦克、重型坦克通过天安门广场，接受了党和国家领导人的检阅。</p>
+<p>在1937年秋天，毛主席就说：“我们现在还没有一辆坦克，也没有大炮，但是有一批懂技术的干部了。有人，就一定能把特种兵建立起来，坦克和大炮敌人会给我们送来的。”</p>
+<p>1945年8月8日，日本无条件投降。驻南泥湾的八路军炮兵学校里接到中央军委指示：派人到东北战场，收缴日军坦克，建立特种兵部队。
+1949年10月1日开国大典时，新中国还没有批量生产坦克的能力，坦克方队的坦克全部都是缴获的外国坦克。</p>
+<h2 id="五代传承"><a class="header" href="#五代传承">五代传承</a></h2>
+<p>1959年，中国自主生产的第一代59式坦克开始列装部队。从此，老“功臣号”坦克光荣退役，但“功臣号”作为一个有着光荣历史的车号，在中国人民解放军编制序列中一直延续。“功臣号”教育官兵勿忘革命历史，赓续红色基因，让“勇往直前、战无不胜”的“功臣号”精神薪火相传。</p>
+<p>拥有光辉历史的中国人民解放军首支装甲部队“功臣号”连，已经换装99A式主战坦克。在“地表最强”的解放军第五代“功臣号”入役的同时，当年仅靠一台日本“老头坦克”打天下的“功臣号”所在部队也已经发展为解放军新一代“土豪旅”。功臣号”坦克历经五次换装更，从缴获的日本坦克升级为最新锐的99A主战坦克。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="M3A3-568.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="T-34.85-215.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="M3A3-568.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="T-34.85-215.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
