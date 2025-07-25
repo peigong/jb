@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>美国造P-51D野马战斗机 - 跟着周导看军博 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">跟着周导看军博 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/jb" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/jb/edit/master/guide/src/U.S.P-51D-Mustang-Fighter.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="美国造p-51d野马战斗机"><a class="header" href="#美国造p-51d野马战斗机">美国造P-51D野马战斗机</a></h1>
+<p><img src="./images/U.S.P-51D-Mustang-Fighter-2.jpg" alt="" /></p>
+<p>解放战争后期，人民解放军从国民党军手中陆续缴获、接收了一批P-51战斗机。1949年8月，以这批战斗机为基础在南苑机场组建了第一支飞行中队。在开国大典上，该中队9架P-51战斗机飞越天安门上空，接受党和国家领导人的检阅，这是其中的一架。</p>
+<p>P-51战斗机是美国航空公司研制的一种下单翼单座战斗机，1942年10月首飞，次年9月装备使用，后发展了A、B、D、K等型号，被世界航空界公认为达到了螺旋桨战斗机制造技术的顶峰。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>乘员：1人</li>
+<li>机长：9.85米</li>
+<li>翼展：11.28米</li>
+<li>机高：2.64米</li>
+<li>动力装置：1台V-1650-7液冷活塞式发动机，起飞功率1066千瓦</li>
+<li>实用升限：12771米</li>
+<li>最大速度：703千米/时（高度7620米）</li>
+<li>武器装备：12.7毫米机枪6挺，2枚炸弹或6枚火箭弹</li>
+</ul>
+<p><img src="./images/U.S.P-51D-Mustang-Fighter-1.jpg" alt="" /></p>
+<p>人民空军正式建立之前，以P-51野马战斗机为基础，在南苑机场组建了我军第一支飞行中队。在开国大典上，南苑飞行中队的9架P-51野马战斗机飞越天安门上空，接受了党和国家领导人的检阅。军博陈列的P-51D野马战斗机，就是其中的一架。</p>
+<h2 id="p-51d野马战斗机"><a class="header" href="#p-51d野马战斗机">P-51D野马战斗机</a></h2>
+<p>今天的人们可能不太熟悉，但P-51野马战斗机达到了螺旋桨战斗机制造技术的顶峰，是世界航空界公认的。</p>
+<p>1940年，经过120天的研制，美国北美飞机制造公司为英国研制了一种新型战斗机。新机服役编号定为P-51，英国人取名为野马。在第二次世界大战中，P-51野马战斗机立下了显赫的战功，被誉为歼击机之王。</p>
+<p>P-51野马战斗机，是单翼单座单发平直翼活塞式战斗机，采用先进的层流翼型。高度简洁的机身设计，合理的机内设备布局，使气动阻力大大下降，并且在尺寸和重量与同类飞机相当的情况下，载油量增加了3倍。</p>
+<p>抗日战争胜利后，国民党政府从美国购买了大量的P-51战斗机。解放战争后期，解放军陆续缴获、接收了一批P-51战斗机。</p>
+<h2 id="南苑飞行中队"><a class="header" href="#南苑飞行中队">南苑飞行中队</a></h2>
+<p>1949年8月15日，为了对付国民党军队的空袭，加强北平地区的要地防空力量，在北平南苑机场成立了飞行中队。</p>
+<p>南苑飞行中队是人民解放军的第一个飞行中队，也是第一支空军部队。P-51野马战斗机，是南苑飞行中队的主力战机。</p>
+<p>飞行中队成立后，参加的第一件具有重大历史意义的工作，就是开国大典空中受阅。阅兵计划原来没有空军飞行部队参加，只有几架运输机到会场上空散发传单。9月中旬中央决定，阅兵时除地面部队外，空军也要参加。</p>
+<p>这是中国第一次空中受阅，过去国民党空军也没有搞过，而且时间也已经十分紧迫。</p>
+<p>当时的飞机装备，几乎全是来自缴获或者起义的飞机。飞机型号多种多样，高的高、低的低，快的快、慢的慢。就是同一类型飞机，速度也不一样。飞机又破又旧，都是经地勤人员日日夜夜抢修好的。飞行员们来自全国各地，语言不同、飞行习惯、空中应对方式都彼此不熟悉，空中联络也是个问题。</p>
+<p>聂荣臻元帅是开国大典阅兵总指挥，在听取了军委航空局的详细汇报后，再次强调：空中受阅与地面受阅不同，难度大，影响也大，一定要搞好，你们要抓紧时间，周密计划，确保万无一失。</p>
+<p>参加阅兵飞行的飞行员都做了阅兵宣誓：“我参加检阅，一旦飞机出现故障，宁愿献出生命，也不让飞机落在城内、掉在广场和附近的建筑物上。”</p>
+<h2 id="飞行训练"><a class="header" href="#飞行训练">飞行训练</a></h2>
+<p>南苑飞行中队拟订了20天的飞行训练计划，以及多机种使用南苑机场一条跑道的日程安排，飞行训练重点是编队课目。为了做到确有把握，毛主席也批准了先在天安门上空试飞几次的请示。</p>
+<p>当时，北平正在召开第一届新的政治协商会议，飞行中队的责任非常重大。每天拂晓就有十多架战斗机在进行试车检查，从很远就能听到发动机巨大的轰鸣声。北平城内风传共产党调来大批空军，驻扎在南苑机场。传闻的数字先是几十架，以后变成了上百架。敌人也一时弄不清虚实，起到了威慑的作用。</p>
+<p>有一次，轰隆隆的飞机引擎声让政协代表们有点儿坐不住，开始交头接耳，以为是国民党军飞机来空袭。周总理笑着告诉大家：“这是我们自己的飞机，他们在保卫我们的政协会议。同时他们也是在训练，为开国大典做阅兵准备。”顿时，一阵欢呼声盖住了周恩来总理的声音，代表们热烈地鼓起掌来。</p>
+<h2 id="飞行高度"><a class="header" href="#飞行高度">飞行高度</a></h2>
+<p>阅兵式空中编队采用什么高度才比较合适呢？高了看不清。低了一方面声音干扰大，另一方面是飞机速度快，转眼就飞过去看不见了。飞行高度是个十分专业的问题，谁也没有经验。</p>
+<p>在8月的一天，军委航空局局长常乾坤带着两个飞行员，到聂总办公室汇报工作，“偶遇”了一位苏联空军将军。工作结束后，聂总对常乾坤他们说：“你们留下来，陪苏联空军将军吃烤鸭。”</p>
+<p>席间，常乾坤适时问道：“聂总，我想请示一下，飞过天安门时，高度怎么确定？”聂荣臻元帅一边吃着饭，一边头也不抬地指了下苏联将军：“这个问题，你问他。”</p>
+<p>苏联将军正吃着高兴，立即接过来话说：“要根据各型飞机的下滑率来确定飞行高度，飞机能够滑翔到不伤害人的地方就行。”就这样，一个专业难题迎刃而解。</p>
+<h2 id="带弹飞行"><a class="header" href="#带弹飞行">带弹飞行</a></h2>
+<p>除了空中受阅任务，南苑飞行中队还担负着保卫北平的要地防空任务。开国大典前两天，有4位飞行员分头接到秘密通知：为防止受阅时敌机的袭扰，要带弹参加受阅，准备随时从空中受阅转入反空袭作战。</p>
+<p>至于哪架飞机上装有武器弹药，只有飞行员本人知道，方阵里的其他飞行员都不知道。</p>
+<p>执行带弹空中受阅任务的4位飞行员，都是驾机起义的国民党空军飞行员。阎磊是其中一位飞行员，几十年后回忆时，说出了当年没有说出的肺腑之言：作为刚刚起义过来的飞行员就参加带弹飞行，充分体现了党和人民对起义人员的极大信任。</p>
+<h2 id="两次飞越天安门"><a class="header" href="#两次飞越天安门">两次飞越天安门</a></h2>
+<p>参加受阅的飞机共17架，编成6个分队，形成一个跟进队形通过天安门上空。9架P-51野马战斗机编为三个品字形的1、2、3分队；2架蚊式轰炸机编为一字形的4分队；3架C-46运输机编为品字形的5分队；1架L-5通信机与2架PT-19教练机合编为品字形的6分队。</p>
+<p>周总理提出了意见：“17架飞机，显得有些少了。”飞机的确有些少，而且飞机又不可能慢动作飞行。飞过天安门上空，会让人觉得忽地一下就没了。但是其他仅有的几架飞机还有战备任务，实在没办法再增加飞机。</p>
+<p>这时，周总理帮着出了个主意：“能不能让领队的战斗机通过天安门后，再飞回来接在最后面的教练机后面，再飞一遍？”</p>
+<p>10月1日下午，受阅的1、2、3分队9架P-51野马战斗机刚刚通过天安门上空，飞行员随即加大速度，在复兴门上空作右后方转弯。沿西直门、德胜门、安定门、东直门、朝阳门，再转向建国门。当到达东单上空时，正好与6分队的教练机相衔接，9架P-51野马战斗机再一次通过了天安门上空。由于衔接得天衣无缝，所以在地面观看的群众都以为受阅的飞机是26架。</p>
+<p>当晚，朱德总司令在北京饭店宴请受阅代表，飞行员们连飞行服也没有换就匆匆赶去。朱总司令来到飞行员们面前说：“你们飞得很好，从现在起，我就是名副其实的陆海空三军总司令了。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="Meritorious-Jet-Fighter.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="Japenese-Tachikawa-Advanced-Trainer-Aircraft-Type99.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="Meritorious-Jet-Fighter.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="Japenese-Tachikawa-Advanced-Trainer-Aircraft-Type99.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

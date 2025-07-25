@@ -7,7 +7,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "serve": "mdbook serve",
+    "start": "mdbook serve",
     "build": "mdbook clean & mdbook build"
   }
 }
