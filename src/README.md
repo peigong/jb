@@ -1,6 +1,6 @@
 # 跟着周导看军博
 
-- [跟着周导看军博(https://pg.js.cn/jb/)](https://pg.js.cn/jb/)
+- [跟着周导看军博(https://pg.js.cn/jb/html)](https://pg.js.cn/jb/html) - [下载PDF格式](https://pg.js.cn/jb/pdf/output.pdf)
 - [导游笔记之中国人民革命军事博物馆(https://pg.js.cn/guide/military-museum/)](https://pg.js.cn/guide/military-museum/)
 - [导游笔记(https://pg.js.cn/guide)](https://pg.js.cn/guide)
 
